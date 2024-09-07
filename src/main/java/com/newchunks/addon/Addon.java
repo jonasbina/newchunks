@@ -6,7 +6,8 @@ import com.newchunks.addon.hud.NcHud;
 import com.newchunks.addon.modules.NewchunksModule;
 
 import meteordevelopment.meteorclient.addons.MeteorAddon;
-import meteordevelopment.meteorclient.systems.commands.Commands;
+import meteordevelopment.meteorclient.commands.Command;
+import meteordevelopment.meteorclient.commands.Commands;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
@@ -24,9 +25,8 @@ public class Addon extends MeteorAddon {
 
         // Modules
         Modules.get().add(new NewchunksModule());
-
         // Commands
-        Commands.get().add(new StaidCommand());
+        Commands.add(new StaidCommand());
 
         // HUD
         Hud.get().register(NcHud.INFO);
